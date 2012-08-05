@@ -62,8 +62,38 @@ http://www.java2s.com/Open-Source/Android/UnTagged/islamictools/com/alpha/pt/Pra
 https://developers.google.com/maps/signup
 
 # Changelog
-### 0.1 Beta:
-- First version
+## 2.0
+- Licensed under GPLv3, source code will be upload it to github
+- Completely re-implemented
+- Used the prayer time calculation methods from http://praytimes.org, Licensed under GPLv3.
+- Play athan sound using jPlayer HTML5 Audio Library http://jplayer.org/, Licensed under MIT and GPLv3.
+- Added the "Prayer Times Widget Advance Setting" as a system preferences pane
+- Prayer Time Widget detect the location automatically by IP address
+- Added more advanced settings, like: more calculation methods, prayer time adjustment, … etc
+- Arabic localisation support, depending on user's system language setting
+- Dedicated domain: http://ptwmac.alrokayan.com (Please use this URL to reference to the "Prayer Times Widget for Mac").
+
+### 0.9 Beta:
+- Stable version before version 1, which has been skipped.
+
+### 0.7.6 Beta:
+- Fix Fajr only Bug
+
+### 0.7 Beta:
+- Fix PowerPC processor compatibility
+- Solve Athan after sleep mode
+- Improve detecting the location (main change)
+- Fix Athan out of salah time in some Mac
+
+### 0.5.2 Beta:
+- Fix Highlighting Bug
+- Re-Fix Stop Athan Bug
+- Fix Shrouk Red Highlighting.
+
+### 0.5.1 Beta:
+- Fix Stop Athan Bug
+- Fix Daylight Saving Bug
+- Fix Long Country Autodetecting
 
 ### 0.5 Beta:
 - Auto-detect your location and use Google Maps to figure it out 
@@ -75,38 +105,8 @@ https://developers.google.com/maps/signup
 - Save the setting in external file (~/Library/Application Support/PrayerTime/PrayerTimeConfig.xml) 
 - Highlight upcomng prayer
 
-### 0.5.1 Beta:
-- Fix Stop Athan Bug
-- Fix Daylight Saving Bug
-- Fix Long Country Autodetecting
-
-### 0.5.2 Beta:
-- Fix Highlighting Bug
-- Re-Fix Stop Athan Bug
-- Fix Shrouk Red Highlighting.
-
-### 0.7 Beta:
-- Fix PowerPC processor compatibility
-- Solve Athan after sleep mode
-- Improve detecting the location (main change)
-- Fix Athan out of salah time in some Mac
-
-### 0.7.6 Beta:
-- Fix Fajr only Bug
-
-### 0.9 Beta:
-- Stable version before version 1, which has been skipped.
-
-## 2.0
-- Licensed under GPLv3, source code will be upload it to github
-- Completely re-implemented
-- Used the prayer time calculation methods from http://praytimes.org, Licensed under GPLv3.
-- Play athan sound using jPlayer HTML5 Audio Library http://jplayer.org/, Licensed under MIT and GPLv3.
-- Added the "Prayer Times Widget Advance Setting" as a system preferences pane
-- Prayer Time Widget detect the location automatically by IP address
-- Added more advanced settings, like: more calculation methods, prayer time adjustment, … etc
-- Arabic localisation support, depending on user's system language setting
-- Dedicated domain: http://ptwmac.alrokayan.com (Please use this URL to reference to the "Prayer Times Widget for Mac").
+### 0.1 Beta:
+- First version
 
 # Known Issue:
 NONE
