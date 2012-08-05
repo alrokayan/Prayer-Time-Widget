@@ -60,7 +60,7 @@ function show()
 {	
 	// your widget has just been shown.  restart any timers
 	// and adjust your interface as needed
-    updateLabels();
+    doInFront();
 }
 
 function showBack(event)
@@ -143,7 +143,8 @@ if (window.widget)
 ///////////GLOBLE Varible////////////////
 /////////////////////////////////////////
 	
-	var multiThreadBug = 1;
+	var checkAthanFunctionIsInProgress = 1;
+    var soundEnableChecked = 0;
 
 ////////////////////////////////////////////////
 ///////////Submit Back & doInFront/////////////
@@ -184,57 +185,54 @@ function doInFront()
 	
 		
 		//set Color to Next Prayer
-        updateLabels();
+        var next = PT.nextPrayer();
 		
-        //Check for athan every 20 sec
-		setTimeout("checkAthan();", 20*1000); //check every 20 Sec
+        document.getElementById("Fimg").style.visibility = "hidden";
+        document.getElementById("Simg").style.visibility = "hidden";
+        document.getElementById("Zimg").style.visibility = "hidden";
+        document.getElementById("Aimg").style.visibility = "hidden";
+        document.getElementById("Mimg").style.visibility = "hidden";
+        document.getElementById("Iimg").style.visibility = "hidden";
+    
+        document.getElementById("FFimg").style.visibility = "hidden";
+        document.getElementById("SSimg").style.visibility = "hidden";
+        document.getElementById("ZZimg").style.visibility = "hidden";
+        document.getElementById("AAimg").style.visibility = "hidden";
+        document.getElementById("MMimg").style.visibility = "hidden";
+        document.getElementById("IIimg").style.visibility = "hidden";
+    
+        if(next.englishPrayName == "Fajr")
+        {
+            document.getElementById("Fimg").style.visibility = "visible";
+        }
+        if(next.englishPrayName == "Shuruq")
+	    {
+	        document.getElementById("Simg").style.visibility = "visible";
+	    }
+	    if(next.englishPrayName == "Dhuhr")
+	    {
+	        document.getElementById("Zimg").style.visibility = "visible";
+	    }
+	    if(next.englishPrayName == "Asr")
+	    {
+	        document.getElementById("Aimg").style.visibility = "visible";
+	    }
+	    if(next.englishPrayName == "Maghrib")
+	    {
+	        document.getElementById("Mimg").style.visibility = "visible";
+	    }
+	    if(next.englishPrayName == "Isha")
+	    {
+	        document.getElementById("Iimg").style.visibility = "visible";
+	    }
+	    
+	    var enableSound = PT.Sound;
+		if(!soundEnableChecked && enableSound)
+		{
+			soundEnableChecked = 1;
+			setTimeout("checkAthan();", 20*1000);//Check for athan every 20 sec
+		}
 	}
-}
-
-//set Color to Next Prayer
-function updateLabels()
-{
-    var next = PT.nextPrayer();
-		
-    document.getElementById("Fimg").style.visibility = "hidden";
-    document.getElementById("Simg").style.visibility = "hidden";
-    document.getElementById("Zimg").style.visibility = "hidden";
-    document.getElementById("Aimg").style.visibility = "hidden";
-    document.getElementById("Mimg").style.visibility = "hidden";
-    document.getElementById("Iimg").style.visibility = "hidden";
-    
-    document.getElementById("FFimg").style.visibility = "hidden";
-    document.getElementById("SSimg").style.visibility = "hidden";
-    document.getElementById("ZZimg").style.visibility = "hidden";
-    document.getElementById("AAimg").style.visibility = "hidden";
-    document.getElementById("MMimg").style.visibility = "hidden";
-    document.getElementById("IIimg").style.visibility = "hidden";
-    
-    if(next.englishPrayName == "Fajr")
-    {
-        document.getElementById("Fimg").style.visibility = "visible";
-    }
-    if(next.englishPrayName == "Shuruq")
-    {
-        document.getElementById("Simg").style.visibility = "visible";
-    }
-    if(next.englishPrayName == "Dhuhr")
-    {
-        document.getElementById("Zimg").style.visibility = "visible";
-    }
-    if(next.englishPrayName == "Asr")
-    {
-        document.getElementById("Aimg").style.visibility = "visible";
-    }
-    if(next.englishPrayName == "Maghrib")
-    {
-        document.getElementById("Mimg").style.visibility = "visible";
-    }
-    if(next.englishPrayName == "Isha")
-    {
-        document.getElementById("Iimg").style.visibility = "visible";
-    }	
-
 }
 
 
@@ -350,48 +348,36 @@ function playAthanSound()
 
 
 function checkAthan()
-{
-    var enableSound = PT.Sound;
-    
-    
-	if (enableSound && multiThreadBug)
+{    
+	if(checkAthanFunctionIsInProgress)
 	{
-        if(multiThreadBug)
-        {
-            var nextPT = PT.nextPrayer();
-            
-            var nextPT_Remaining = nextPT.remaining.toFixed(2);
-            
-            var nextHr  = Math.floor(nextPT_Remaining);
-            var nextMin = Math.round((nextPT_Remaining - nextHr) * 100);
-            
-            alert(nextPT_Remaining);
-            alert(nextHr);
-            alert(nextMin);
-            
-            if(nextPT.englishPrayName != "Shuruq")
-            {
-			
-                if (nextMin <= 3 && nextHr == 0)
-                {				
-                    setTimeout('playAthanSound()',nextMin*60*1000); //Play sound afer the number of mins 
-                    multiThreadBug = 0;
-                    return;
-                }
-                else
-                {
-                    //check again util we are close to the prayer time
-                    setTimeout("checkAthan();", 20*1000); //check every 20 Sec
-                    return;
-                }
-            }
-        }
-        else
-        {
-            //check again until the multiThreadBug is true
-            setTimeout("checkAthan();", 20*1000); //check every 20 Sec
-            return;
-        }
+	    var nextPT = PT.nextPrayer();
+	    
+	    var nextPT_Remaining = nextPT.remaining.toFixed(2);
+	    
+	    var nextHr  = Math.floor(nextPT_Remaining);
+	    var nextMin = Math.round((nextPT_Remaining - nextHr) * 100);
+	    
+	    //alert(nextPT_Remaining);
+	    //alert(nextHr);
+	    //alert(nextMin);
+	    
+	    if(nextPT.englishPrayName != "Shuruq")
+	    {
+	
+	        if (nextMin <= 3 && nextHr == 0)
+	        {	
+	            setTimeout('playAthanSound()',nextMin*60*1000); //Play sound afer the number of mins 
+	            checkAthanFunctionIsInProgress = 0;
+	            return;
+	        }
+	        else
+	        {
+	            //check again util we are close to the prayer time
+	            setTimeout("checkAthan();", 20*1000); //check every 20 Sec
+	            return;
+	        }
+	    }
 	}
     
 }
@@ -402,7 +388,7 @@ function stopSound()
     $("#jPlayer_holder").jPlayer("stop");
 	document.getElementById("StopSoundBut").style.visibility = 'hidden';
 	
-    setTimeout('multiThreadBug = 1;',3.5*60*1000); //Don't allow playing Athan after the user stoped the athan immediately
+    setTimeout('checkAthanFunctionIsInProgress = 1;',3.5*60*1000); //Don't allow playing Athan after the user stoped the athan immediately
     
     doInFront();
 	
@@ -499,8 +485,14 @@ function checkNewVersion()
 
 function displayToolTip(my) 
 {
-    var next = PT.nextPrayer();
-	my.title = next.remaining.toFixed(2) + " to " + next.englishPrayName + " Prayer";
+    var nextPT = PT.nextPrayer();
+	    
+    var nextPT_Remaining = nextPT.remaining.toFixed(2);
+	    
+    var nextHr  = Math.floor(nextPT_Remaining);
+    var nextMin = Math.round((nextPT_Remaining - nextHr) * 100);
+        
+	my.title = nextHr + ":" + nextMin + " to " + nextPT.englishPrayName + " Prayer";
 }
 
 

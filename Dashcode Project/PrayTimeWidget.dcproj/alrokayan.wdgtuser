@@ -4,13 +4,13 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
-		<key>widget.wdgt/Prayer Time.js:143</key>
+		<key>widget.wdgt/Prayer Time.js:136</key>
 		<string>-</string>
-		<key>widget.wdgt/Prayer Time.js:298</key>
-		<string>-changeAthanSlider</string>
-		<key>widget.wdgt/Prayer Time.js:303</key>
-		<string>-changeAthanSlider</string>
-		<key>widget.wdgt/Prayer Time.js:400</key>
+		<key>widget.wdgt/Prayer Time.js:286</key>
+		<string>-changeAthanCheckBox</string>
+		<key>widget.wdgt/Prayer Time.js:291</key>
+		<string>-</string>
+		<key>widget.wdgt/Prayer Time.js:386</key>
 		<string>-stopSound</string>
 		<key>widget.wdgt/Prayer Time.js:48</key>
 		<string>-remove</string>
@@ -36,13 +36,15 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Destination</key>
 		<string>localhost.default</string>
 		<key>SavePath</key>
-		<string>/Users/alrokayan/Desktop</string>
+		<string>/Users/alrokayan/Dropbox/Projects/Prayer Time Widget Project/Prayer-Time-Widget</string>
+		<key>WidgetDeployName</key>
+		<string>Prayer Time Widget</string>
 		<key>enableSimulation</key>
 		<true/>
 		<key>simulatedHost</key>
@@ -178,29 +180,17 @@
 			</array>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-			</array>
-			<array>
-				<integer>0</integer>
 				<integer>0</integer>
 			</array>
 			<array>
 				<integer>0</integer>
-				<integer>0</integer>
-				<integer>2</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>1</integer>
 				<integer>1</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
 		<array>
 			<array>
-				<integer>0</integer>
-				<integer>0</integer>
-				<integer>7</integer>
+				<integer>9223372036854775807</integer>
 			</array>
 		</array>
 		<key>Opened Steps</key>
@@ -211,10 +201,10 @@
 		<array>
 			<string>Credits</string>
 			<string>creditsStackLayout</string>
-			<string>front</string>
+			<string>back</string>
+			<string>creditsView</string>
 			<string>view1</string>
 			<string>stackLayout</string>
-			<string>creditsView</string>
 		</array>
 	</dict>
 </dict>
