@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style type="text/css" title="AppleStyle">
+        @import "Prayer Time.css";
+    </style>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/utilities.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/setup.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/Text.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/InfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/GlassButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Prayer Time.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/VerticalLevelIndicator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="location.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/Button.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/OvalShape.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery-1.7.2.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery.jplayer.min.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="front">
+        <img src="Images/BG 1" id="img">
+        <img src="Images/well-english 1.png" id="img1">
+        <div id="info"><div style="position: absolute; top: 0px; left: 0px; width: 13px; height: 13px; opacity: 0.25; visibility: hidden; background-image: url(file:///System/Library/WidgetResources/ibutton/black_rollie.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: 0% 0%; background-repeat: no-repeat no-repeat; "></div><img tabindex="0" role="button" style="outline-width: 0px; outline-style: initial; outline-color: initial; position: absolute; top: 0px; left: 0px; opacity: 0; " width="13" height="13" alt="Info" aria-label="Info" src="file:///System/Library/WidgetResources/ibutton/white_i.png"></div>
+        <div id="PTPlace">Your City</div>
+        <img src="Images/green 1.png" id="Fimg" style="visibility:hidden">
+        <img src="Images/green 2.png" id="Simg" style="visibility:hidden">
+        <img src="Images/green 3.png" id="Zimg" style="visibility:hidden">
+        <img src="Images/green 4.png" id="Aimg" style="visibility:hidden">
+        <img src="Images/green 5.png" id="Mimg" style="visibility:hidden">
+        <img src="Images/green 6.png" id="Iimg" style="visibility:hidden">
+        <img src="Images/red 1.png" id="FFimg" style="visibility:hidden">
+        <img src="Images/red 2.png" id="SSimg" style="visibility:hidden">
+        <img src="Images/red 3.png" id="ZZimg" style="visibility:hidden">
+        <img src="Images/red 4.png" id="AAimg" style="visibility:hidden">
+        <img src="Images/red 5.png" id="MMimg" style="visibility:hidden">
+        <img src="Images/red 6.png" id="IIimg" style="visibility:hidden">
+        <div id="FajrLabel">Fajr</div>
+        <div id="DouhrLabel">Douhr</div>
+        <div id="AsrLabel">Asr</div>
+        <div id="MagribLabel">Magrib</div>
+        <div id="IshaLabel">Isha</div>
+        <div id="FajrTime">00:00</div>
+        <div id="ZohrTime">00:00</div>
+        <div id="AsrTime">00:00</div>
+        <div id="MaghribTime">00:00</div>
+        <div id="IshaTime">00:00</div>
+        <div id="ShroukLable">Shrouk</div>
+        <div id="ShTime">00:00</div>
+        <img src="Images/mute.png" style="visibility:hidden;" id="StopSoundBut" onclick="StopSound();">
+        <canvas width="141" height="297" id="All" onmousemove="displayToolTip(this);"></canvas>
+        <canvas id="jPlayer_holder" apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="18" height="21"></canvas>
+    </div>
+    <div id="back">
+        <!--------------------------------------------------------------->
+        <!--------------------------------------------------------------->
+        <img src="Images/back4 1.png" id="background"><div id="checkboxbutton">
+            <input type="checkbox" name="Checkbox" checked="true" id="AthanSoundCheckBox" onchange="changeAthanCheckBox(event)">
+            <div style="position: absolute; top: 2px; left: 18px; text-align: left; vertical-align: middle;" id="checkboxbutton0">Athan Sound</div>
+        </div>
+        <div id="version">v 2.0</div>
+        <input id="slider" type="range" min="0" value="50" max="100" onchange="changeAthanSlider(event)">
+        <div id="resetText">Reset</div>
+        <div id="cityName" title="Your location as: &quot;city, state&quot;,&quot;country&quot; or &quot;zipcode&quot;">City Name</div>
+        <div id="advPreferances" apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.6154,0.6154,0.6154,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;"></div>
+        <div id="creditsButton" apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.6154,0.6154,0.6154,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;"></div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="resetButton" apple-group="image" onclick="resetButton(event)"><img class="apple-hidden" src="Images/Reset.png" id="inner_image" apple-group="image"></div>
+        <div id="autoLocation" apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.6154,0.6154,0.6154,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;"></div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="loader" apple-group="image"><img class="apple-hidden" src="Images/loading-ajax.gif" id="inner_image1" apple-group="image"></div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="credits" apple-group="image"><img class="apple-hidden" src="Images/unknown.png" id="inner_image2" apple-group="image"></div>
+        <canvas id="credits_bander" apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="122" height="44" onclick="openLink(event)"></canvas>
+        <canvas id="credits_alrokayan" apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="122" height="44" onclick="openLink(event)"></canvas>
+        <canvas id="credits_milyani" apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="122" height="44" onclick="openLink(event)"></canvas>
+        <div id="done" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children"></div>
+    </div>
+</body>
+</html>

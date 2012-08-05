@@ -1,0 +1,701 @@
+/*
+    Copyright 2007 - 2012 Mohammed Alrokayan
+    http://alrokayan.com
+
+    This file is part of Prayer Time Widget.
+
+    Prayer Time Widget is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Prayer Time Widget is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Prayer Time Widget.  If not, see <http://www.gnu.org/licenses/>.
+    
+    Other licenses have beed used, please read README for more information.
+*/
+
+body {
+    margin: 0px;
+}
+
+#info {
+    position: absolute;
+    right: 15px;
+    bottom: 18px;
+    width: 15px;
+    height: 15px;
+    left: 74px;
+    top: 255px;
+}
+
+#back {
+    display: none;
+    height: 320px;
+    margin-right: 0px;
+}
+
+.backDevelopedWith {
+    position: absolute;
+    top: 67px;
+    left: 43px;
+    right: 43px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#FajrLabel {
+    position: absolute;
+    height: 11px;
+    width: 45px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 48px;
+    right: 94px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#DouhrLabel {
+    position: absolute;
+    width: 46px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 111px;
+    right: 93px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#AsrLabel {
+    position: absolute;
+    height: 11px;
+    width: 46px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 142px;
+    right: 93px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#MagribLabel {
+    position: absolute;
+    height: 11px;
+    width: 46px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 172px;
+    right: 93px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#IshaLabel {
+    position: absolute;
+    height: 11px;
+    width: 46px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 204px;
+    right: 93px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#FajrTime {
+    position: absolute;
+    height: 11px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    width: 52px;
+    font-size: 9pt;
+    top: 48px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#ZohrTime {
+    position: absolute;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    width: 52px;
+    font-size: 9pt;
+    top: 112px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#AsrTime {
+    position: absolute;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    height: 10px;
+    width: 52px;
+    font-size: 9pt;
+    top: 143px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#MaghribTime {
+    position: absolute;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    height: 10px;
+    width: 52px;
+    font-size: 9pt;
+    top: 174px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#IshaTime {
+    position: absolute;
+    height: 11px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    width: 52px;
+    font-size: 9pt;
+    top: 205px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#checkboxbutton {
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    font-size: 10pt;
+    width: 94px;
+    top: 182px;
+    left: 13px;
+}
+
+#PTPlace {
+    position: absolute;
+    text-align: center;
+    padding: 0px;
+    word-spacing: -2px;
+    line-height: 11px;
+    color: rgb(255, 255, 255);
+    width: 125px;
+    height: 10px;
+    font-family: LucidaGrande-Bold;
+    font-size: 10pt;
+    letter-spacing: 3px;
+    top: 13px;
+    right: 18px;
+    margin-left: auto;
+    left: 18px;
+    margin-right: auto;
+}
+
+#text63 {
+    position: absolute;
+    color: black;
+    font-family: 'Helvetica Neue';
+    font-size: 10pt;
+    top: 58px;
+    left: 77px;
+    width: 94px;
+    height: 22px;
+}
+
+#checkboxbutton0 {
+    color: rgb(255, 255, 255);
+    font-size: 10pt;
+}
+
+#version {
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    font-size: 8pt;
+    color: rgb(173, 173, 173);
+    top: 235px;
+    left: 117px;
+    width: auto;
+    height: auto;
+}
+
+#img {
+    position: absolute;
+    width: 161px;
+    height: 309px;
+    left: 0px;
+    top: 3px;
+}
+
+#img1 {
+    position: absolute;
+    width: 161px;
+    height: 309px;
+    left: 0px;
+    top: 3px;
+}
+
+#ShroukLable {
+    position: absolute;
+    height: 11px;
+    width: 45px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    letter-spacing: 1px;
+    font-family: LucidaGrande-Bold;
+    font-size: 9pt;
+    top: 81px;
+    right: 94px;
+    margin-left: auto;
+    left: 22px;
+    margin-right: auto;
+}
+
+#ShTime {
+    position: absolute;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+    font-family: LucidaGrande-Bold;
+    width: 52px;
+    font-size: 9pt;
+    height: 11px;
+    top: 81px;
+    right: 23px;
+    margin-left: auto;
+    left: 86px;
+    margin-right: auto;
+}
+
+#slider {
+    position: absolute;
+    left: 37px;
+    visibility: visible;
+    opacity: 1;
+    min-width: 0px;
+    top: 206px;
+    width: 86px;
+}
+
+#StopSoundBut {
+    width: 45px !important;
+    height: 45px !important;
+    position: absolute;
+    cursor: pointer;
+    left: 57px;
+    top: 237px;
+}
+
+#AthanSoundPlay {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+}
+
+#resetText {
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    color: rgb(173, 173, 173);
+    width: 27px;
+    height: 10px;
+    font-size: 7pt;
+    top: 238px;
+    left: 21px;
+}
+
+#Fimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 42px;
+}
+
+#Simg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 75px;
+}
+
+#Zimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 106px;
+}
+
+#Aimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 137px;
+}
+
+#Mimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 168px;
+}
+
+#Iimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.49;
+    left: 16px;
+    top: 199px;
+}
+
+#m1 {
+    position: absolute;
+    top: 9px;
+    left: -71px;
+}
+
+#m3 {
+    position: absolute;
+    top: 9px;
+    left: -71px;
+}
+
+#host {
+    position: absolute;
+    top: 9px;
+    left: -71px;
+}
+
+#text13 {
+    position: absolute;
+    top: 9px;
+    left: -71px;
+}
+
+#FFimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    display: inline;
+    left: 16px;
+    top: 42px;
+}
+
+#SSimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    left: 16px;
+    top: 75px;
+}
+
+#ZZimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    left: 16px;
+    top: 106px;
+}
+
+#AAimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    left: 16px;
+    top: 137px;
+}
+
+#MMimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    left: 16px;
+    top: 168px;
+}
+
+#IIimg {
+    width: 129px !important;
+    height: 28px !important;
+    position: absolute;
+    opacity: 0.6;
+    left: 16px;
+    top: 199px;
+}
+
+#All {
+    position: absolute;
+    width: 145px;
+    height: 227px;
+    left: 6px;
+    top: 6px;
+}
+
+#background {
+    position: absolute;
+    width: 161px;
+    height: 309px;
+    border-color: rgb(0, 0, 0);
+    left: 0px;
+    top: 3px;
+}
+
+#cityName {
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    color: rgb(255, 255, 255);
+    font-size: 10pt;
+    text-align: center;
+    left: 13px;
+    top: 21px;
+    right: 12px;
+    width: auto;
+    height: auto;
+}
+
+#div {
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+}
+
+#advPreferances {
+    font-family: HelveticaNeue-Bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+    -khtml-user-select: none;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    margin-top: 0px;
+    width: 132px;
+    left: 15px;
+    height: 29px;
+    color: rgb(0, 0, 0);
+    top: 123px;
+}
+
+#creditsButton {
+    font-family: HelveticaNeue-Bold;
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+    cursor: default;
+    -khtml-user-select: none;
+    position: absolute;
+    right: auto;
+    margin-top: 0px;
+    left: 51px;
+    height: 16px;
+    top: 236px;
+}
+
+#resetButton {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 12px;
+    top: 240px;
+}
+
+#inner_image {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#autoLocation {
+    font-family: HelveticaNeue-Bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+    -khtml-user-select: none;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    -khtml-user-select: none;
+    position: absolute;
+    right: auto;
+    margin-top: 0px;
+    left: 15px;
+    width: 131px;
+    height: 29px;
+    top: 60px;
+}
+
+#loader {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 135px;
+    top: 21px;
+    left: 14px;
+    height: 15px;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    visibility: hidden;
+}
+
+#inner_image1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#credits {
+    width: 141px;
+    height: 181px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 11px;
+    top: 49px;
+    visibility: hidden;
+}
+
+#inner_image2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#credits_bander {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 21px;
+    top: 180px;
+    width: 122px;
+    height: 44px;
+    visibility: hidden;
+}
+
+#credits_alrokayan {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 122px;
+    height: 44px;
+    left: 19px;
+    top: 67px;
+    visibility: hidden;
+}
+
+#credits_milyani {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 122px;
+    height: 44px;
+    left: 19px;
+    top: 124px;
+    visibility: hidden;
+}
+
+#done {
+    cursor: default;
+    -khtml-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 259px;
+    left: 56px;
+}
+
+#jPlayer_holder {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 21px;
+    width: 18px;
+    top: 237px;
+    left: 130px;
+    visibility: hidden;
+}

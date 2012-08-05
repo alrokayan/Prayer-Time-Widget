@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowFileAccessOutsideOfWidget</key>
+	<true/>
+	<key>AllowNetworkAccess</key>
+	<true/>
+	<key>AllowSystem</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>PrayTimeWidget</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.alrokayan.widget.PrayerTimeWidget</string>
+	<key>CFBundleName</key>
+	<string>PrayTimeWidget</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>2.0</string>
+	<key>CitiesServer</key>
+	<string>http://osxarabia.com/widget/ptime/pt.php</string>
+	<key>CloseBoxInsetX</key>
+	<integer>9</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>13</integer>
+	<key>Height</key>
+	<integer>309</integer>
+	<key>MainHTML</key>
+	<string>Prayer Time.html</string>
+	<key>Plugin</key>
+	<string>PrayerTimesWidgetPlugin.widgetplugin</string>
+	<key>Width</key>
+	<integer>161</integer>
+</dict>
+</plist>
