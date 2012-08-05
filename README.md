@@ -35,13 +35,25 @@ Other licenses have been used with Prayer Time Widget as following:
     
     
 # Where you can find Prayer Time Widget
-Apple Widgets: http://www.apple.com/downloads/dashboard/reference/prayertimes.html
-SoftPedia: http://mac.softpedia.com/get/Dashboard-Widgets/Webcams/Miscellaneous/Prayer-Times-alrokayan.shtml
-MacUpdate: http://www.macupdate.com/info.php/id/24675/prayer-times
+- Apple Widgets
+http://www.apple.com/downloads/dashboard/reference/prayertimes.html
+
+- SoftPedia
+http://mac.softpedia.com/get/Dashboard-Widgets/Webcams/Miscellaneous/Prayer-Times-alrokayan.shtml
+
+- MacUpdate
+http://www.macupdate.com/info.php/id/24675/prayer-times
 
 
 # Sites used in the project
+- praytimes.org
 http://praytimes.org/wiki/Code
+
+- geonames.org
 http://www.geonames.org/export/
+
+- PrayerTime.java
 http://www.java2s.com/Open-Source/Android/UnTagged/islamictools/com/alpha/pt/PrayerTime.java.htm
+
+- Google Maps API
 https://developers.google.com/maps/signup
