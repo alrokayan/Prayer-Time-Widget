@@ -35,18 +35,6 @@ Other licenses have been used with Prayer Time Widget as following:
     http://www.jplayer.org
     Copyright (c) 2009 - 2011 Happyworm Ltd
     Dual licensed under the MIT and GPL licenses.
-    
-    
-# Where you can find Prayer Time Widget
-- Apple Widgets
-http://www.apple.com/downloads/dashboard/reference/prayertimes.html
-
-- SoftPedia
-http://mac.softpedia.com/get/Dashboard-Widgets/Webcams/Miscellaneous/Prayer-Times-alrokayan.shtml
-
-- MacUpdate
-http://www.macupdate.com/info.php/id/24675/prayer-times
-
 
 # Sites used in the project
 - praytimes.org
