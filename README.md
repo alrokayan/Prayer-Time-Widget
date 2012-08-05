@@ -1,5 +1,8 @@
 You can contact Mohammed Alrokayan via the contact form from his website: http://alrokayan.com.
 
+# Official page
+[PTWMac.alrokayan.com](PTWMac.alrokayan.com)
+
 # Prayer Time Widget License
     Prayer Time Widget is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
