@@ -97,7 +97,7 @@ https://developers.google.com/maps/signup
 - First version
 
 # Known Issue:
-NONE
+- Isha Calculation for Umm Al-Qura
 
 # ToDo:
 - Fajer Athan
