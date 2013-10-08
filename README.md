@@ -1,7 +1,12 @@
-You can contact Mohammed Alrokayan via the contact form from his website: http://alrokayan.com.
+# Download
+Version 2.0: http://dl.dropbox.com/u/550719/PrayerTimeWidgetForMac/Prayer_Time_Widget_v2.0.zip
 
-# Official page
-[PTWMac.alrokayan.com](PTWMac.alrokayan.com)
+# What is Prayer Time Widget?
+A beautiful widget shows a list of the five prayer times of your local city in your D
+ashboard. It keeps you informed all the time.
+For the first time, you need to download your city information from the Internet, after that your location information will be stored in your widget.
+This widget supports Athan sound with the option to adjust the volume within the widget. Also, it supports wide range of calculation methods.
+
 
 # Prayer Time Widget License
     Prayer Time Widget is free software: you can redistribute it and/or modify
